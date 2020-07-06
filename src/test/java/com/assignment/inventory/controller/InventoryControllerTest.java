@@ -16,12 +16,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
+import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.sql.DataSource;
 import java.net.URI;
 
 @Slf4j
+@ActiveProfiles("test")
 @SpringBootTest(classes = InventoryApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@ContextConfiguration
 public class InventoryControllerTest {
 
 
